@@ -1,6 +1,11 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import Kick from "./UserAvatarAnimation.js";
+import One from "./OneIdle";
+import Ready from "./ReadyIdle";
+import Happy from "./HappyIdle";
+import Ninja from "./NinjaIdle";
+
 
 import { OrbitControls } from "@react-three/drei";
 import "./styles.css";

@@ -6,10 +6,10 @@ import React, { useRef, useEffect } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 
 export default function Model({ ...props }) {
+  //animationTarget = useGLTF()
+
   const group = useRef()
-  const { nodes, materials } = useGLTF('/userAvatarAnimation.glb')
-  
-  const { animations } = useGLTF('')
+  const { nodes, materials, animations } = useGLTF('/userAvatarAnimation.glb')
 
   const { actions } = useAnimations(animations, group)
   useEffect(() => {
