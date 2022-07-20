@@ -7,7 +7,7 @@ import "./styles.css";
 
 export default function App() {
   return (
-    <Canvas>
+    <Canvas  camera={{position: [-3, 6, 20], fov: 7}}>
       <OrbitControls />
       <ambientLight intensity={0.6} />
       <directionalLight intensity={0.5} />
