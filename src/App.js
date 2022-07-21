@@ -6,7 +6,6 @@ import Ready from "./Ready";
 import Happy from "./HappyIdle";
 import Ninja from "./NinjaIdle";
 
-
 import { OrbitControls } from "@react-three/drei";
 import "./styles.css";
 
@@ -17,7 +16,7 @@ export default function App() {
       <ambientLight intensity={0.6} />
       <directionalLight intensity={0.5} />
       <Suspense fallback={null}>
-        <Ready />
+        <Happy />
       </Suspense>
     </Canvas>
   );
