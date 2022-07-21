@@ -1,8 +1,8 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import Kick from "./UserAvatarAnimation.js";
-import One from "./OneIdle";
-import Ready from "./ReadyIdle";
+import One from "./Idle";
+import Ready from "./Ready";
 import Happy from "./HappyIdle";
 import Ninja from "./NinjaIdle";
 
@@ -17,7 +17,7 @@ export default function App() {
       <ambientLight intensity={0.6} />
       <directionalLight intensity={0.5} />
       <Suspense fallback={null}>
-        <Kick />
+        <Ready />
       </Suspense>
     </Canvas>
   );
