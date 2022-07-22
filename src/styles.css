@@ -13,7 +13,22 @@ body,
 }
 
 body {
-  background: #9BB2CE;
+
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
     helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+}
+
+body > * {
+  background: #9BB2CE;
+}
+
+#buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.actionButton {
+  margin-bottom: 10px;
 }

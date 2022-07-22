@@ -6,17 +6,31 @@ import React, { useRef, useEffect } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 
 export default function Model({ ...props }) {
+  function changeAnimation(animationName) {
+    //const animationFileNames = ["Idle", "Ready", "NinjaIdle", "HappyIdle"]
+    //get GLB file name
+    const glbFileName = '/'+animationName+'.glb'
+    //set const animation 
+    const { animations } = useGLTF(glbFileName)
+    //get action from the animations
+    const { actions } = useAnimations(animations, group)
+    useEffect(()=> {
+        console.log(actions)
+        //actions['idle'].play();
+    })
+  }
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/ninjaIdle.glb')
+  const { nodes, materials } = useGLTF('/ninjaIdle.glb')
+  const { animations } = useGLTF('/idle.glb')
   const { actions } = useAnimations(animations, group)
   useEffect(() => {
-    console.log(actions);
-    actions.oneIdle.play();
+    console.log(actions['idle']);
+    actions['idle'].play();
   });
   return (
     <group ref={group} {...props} dispose={null}>
-      <group name="Scene">
-        <group name="Armature">
+      <group name="Scene" position={[0,-0.93,0]}>
+        <group name="Armature" >
           <primitive object={nodes.Hips} />
           <skinnedMesh name="Wolf3D_Body" geometry={nodes.Wolf3D_Body.geometry} material={materials.Wolf3D_Body} skeleton={nodes.Wolf3D_Body.skeleton} />
           <skinnedMesh name="Wolf3D_Hair" geometry={nodes.Wolf3D_Hair.geometry} material={materials.Wolf3D_Hair} skeleton={nodes.Wolf3D_Hair.skeleton} />

@@ -15,8 +15,8 @@ export default function Model({ ...props }) {
   })
   return (
     <group ref={group} {...props} dispose={null}>
-      <group>
-        <group name="Armature">
+      <group position={[0,-0.94,0]}>
+        <group name="Armature" >
           <primitive object={nodes.Hips} />
           <group name="EyeLeft" />
           <group name="EyeRight" />
