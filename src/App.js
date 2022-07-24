@@ -1,7 +1,6 @@
-import React, { Component, Suspense } from "react";
+import React, { Component, createRef, Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, View } from "@react-three/drei";
-import { Container } from "react-bootstrap";
+import { OrbitControls } from "@react-three/drei";
 import $ from 'jquery'
 
 import Radio from "./Radio"
@@ -15,10 +14,17 @@ import "./styles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { render } from "react-dom";
 
-export default class App extends Component {
-    jQuerycode = () => {
+export default function App() {
+    const child = useRef()
+    const handleClick = () =>{
+        child.current.getAlert()
+    }
+
+    const jQuerycode = () => {
       $("#idleButton").on('click',function(){
-          console.log("idle")
+        console.log("idle")
+        child.current.changeAnimationHandler();
+          
       });
       $("#readyButton").on('click',function(){
           console.log("ready")
@@ -30,10 +36,10 @@ export default class App extends Component {
           console.log("happy")
       });
   } 
-    componentDidMount(){
-        this.jQuerycode()
-    }
-  render(){
+    useEffect(
+      ()=>{jQuerycode()}
+    )
+    
     return (
       <div className="row h-100" style={{}}>
         <div className="col-2 btn-group-vertical" id="buttonContainer">
@@ -45,15 +51,13 @@ export default class App extends Component {
             <ambientLight intensity={0.6} />
             <directionalLight intensity={0.5} />
             <Suspense fallback={null}>
-              <Ninja/>
+              <Ninja ref={child} />
             </Suspense>
           </Canvas>
+          
         </div>
       </div>
     )
-
-  }
-
 }
 
 

@@ -11,7 +11,7 @@ export default function Model({ ...props }) {
   const { actions } = useAnimations(animations, group)
   useEffect(() => {
     console.log(actions);
-    actions.Gesture.play();
+    actions['Gesture'].play();
   });
   return (
     <group ref={group} {...props} dispose={null}>
