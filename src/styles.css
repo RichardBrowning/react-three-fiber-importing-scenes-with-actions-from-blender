@@ -22,13 +22,21 @@ body > * {
   background: #9BB2CE;
 }
 
-#buttonContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.actionButton{
+  background-color: #9BB2CE;
+  border-color: #9BB2CE;
+  margin-bottom: auto;
+}
+.actionButton:hover{
+  background-color: #7a8da4;
+  border-color: #9BB2CE;
+}
+.actionButton:focus{
+  background-color: #7a8da4;
+  border-color: #9BB2CE;
+}
+.actionButton:active{
+  background-color: #90a7c2;
+  border-color: #9BB2CE;
 }
 
-.actionButton {
-  margin-bottom: 10px;
-}
