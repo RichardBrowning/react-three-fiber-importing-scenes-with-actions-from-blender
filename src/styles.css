@@ -13,30 +13,32 @@ body,
 }
 
 body {
-
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
     helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
 }
 
 body > * {
-  background: #9BB2CE;
+  background: #AEC7EB;
 }
 
 .actionButton{
-  background-color: #9BB2CE;
-  border-color: #9BB2CE;
+  width: 100%;
+  height: 90%;
+  border-radius: 50%;
+  background-color: #AEC7EB;
+  border-color: #AEC7EB;
   margin-bottom: auto;
 }
 .actionButton:hover{
-  background-color: #7a8da4;
-  border-color: #9BB2CE;
+  background-color: #a7c2e2;
+  border-color: #AEC7EB;
 }
 .actionButton:focus{
-  background-color: #7a8da4;
-  border-color: #9BB2CE;
+  background-color: #92a9c5;
+  border-color: #AEC7EB;
 }
 .actionButton:active{
-  background-color: #90a7c2;
-  border-color: #9BB2CE;
+  background-color: #a1bbda;
+  border-color: #AEC7EB;
 }
 

@@ -15,7 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { render } from "react-dom";
 
 export default function App() {
-    const [actionName, setActionName] = useState('ninyaIdle');
+    const [actionName, setActionName] = useState('oneIdle');
 
     const jQuerycode = () => {
       $("#idleButton").on('click',function(){
@@ -41,11 +41,11 @@ export default function App() {
     
     return (
       <div className="row h-100" style={{}}>
-        <div className="col-2 btn-group-vertical" id="buttonContainer">
+        <div className="h-50 col-2 d-grid " id="buttonContainer">
           <Radio/>
         </div>
         <div id="modelContainer" className="h-100 col-10 d-inline-block">
-          <Canvas  camera={{position: [-3, 6, 20], fov: 5.3}}>
+          <Canvas camera={{position: [-3, 6, 20], fov: 6.2}}>
             <OrbitControls />
             <ambientLight intensity={0.6} />
             <directionalLight intensity={0.5} />

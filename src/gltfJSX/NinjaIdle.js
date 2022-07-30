@@ -24,7 +24,7 @@ export default function Model({ ...props }) {
 
   return (
     <group ref={group} {...props} dispose={null}>
-      <group name="Scene" position={[0,-0.93,0]}>
+      <group name="Scene" position={[0,-0.78,0]}>
         <group name="Armature" >
           <primitive object={nodes.Hips} />
           <skinnedMesh name="Wolf3D_Body" geometry={nodes.Wolf3D_Body.geometry} material={materials.Wolf3D_Body} skeleton={nodes.Wolf3D_Body.skeleton} />
