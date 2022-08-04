@@ -1,6 +1,6 @@
 import React, { Component, createRef, Suspense, useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Environment } from "@react-three/drei";
 import $ from 'jquery'
 
 import Radio from "./Radio"
@@ -50,6 +50,7 @@ export default function App() {
             <ambientLight intensity={0.6} />
             <directionalLight intensity={0.5} />
             <Suspense fallback={null}>
+              <Environment preset="lobby"/>
               <Ninja action={actionName} />
             </Suspense>
           </Canvas>

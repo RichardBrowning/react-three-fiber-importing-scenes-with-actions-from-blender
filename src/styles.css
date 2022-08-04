@@ -1,4 +1,5 @@
 /*styles.css*/
+
 * {
   box-sizing: border-box;
 }
@@ -18,27 +19,28 @@ body {
 }
 
 body > * {
-  background: #AEC7EB;
+  background: #F0F0F0;
 }
 
 .actionButton{
   width: 100%;
-  height: 90%;
   border-radius: 50%;
-  background-color: #AEC7EB;
-  border-color: #AEC7EB;
+  background-color: #F0F0F0;
+  border-color: #F0F0F0;
   margin-bottom: auto;
+
+  color: black;
 }
 .actionButton:hover{
-  background-color: #a7c2e2;
-  border-color: #AEC7EB;
+  background-color: #F0F0F0;
+  border-color: #F0F0F0;
 }
 .actionButton:focus{
-  background-color: #92a9c5;
-  border-color: #AEC7EB;
+  background-color: #F0F0F0;
+  border-color: #F0F0F0;
 }
-.actionButton:active{
-  background-color: #a1bbda;
-  border-color: #AEC7EB;
-}
+/* .actionButton:active{
+  background-color: #F0F0F0;
+  border-color: #F0F0F0;
+} */
 
