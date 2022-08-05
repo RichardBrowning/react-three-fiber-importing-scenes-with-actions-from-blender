@@ -1,4 +1,4 @@
-import React, { Component, createRef, Suspense, useEffect, useRef, useState } from "react";
+import React, {Suspense, useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Environment } from "@react-three/drei";
 import $ from 'jquery'
@@ -12,7 +12,6 @@ import Ninja from "./gltfJSX/NinjaIdle";
 
 import "./styles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { render } from "react-dom";
 
 export default function App() {
     const [actionName, setActionName] = useState('oneIdle');
@@ -40,11 +39,11 @@ export default function App() {
     )
     
     return (
-      <div className="row h-100" style={{}}>
-        <div className="h-50 col-2 d-grid " id="buttonContainer">
+      <div className="h-100" style={{}}>
+        <div className="" id="buttonContainer">
           <Radio/>
         </div>
-        <div id="modelContainer" className="h-100 col-10 d-inline-block">
+        <div id="modelContainer" className="h-100">
           <Canvas camera={{position: [-3, 6, 20], fov: 6.2}}>
             <OrbitControls />
             <ambientLight intensity={0.6} />
