@@ -9,13 +9,12 @@ import SportsMartialArtsIcon from '@mui/icons-material/SportsMartialArts';
 import { CSSTransition } from 'react-transition-group';
 import "./styles.css";
 
-export default function Radio(){
+export default function Radio(props){
     //record the toggled state
     const [toggled, setToggled] = useState(false);
 
     const toggleMenu =()=>{
         setToggled(!toggled);
-
         console.log(toggled);
     }
     /**
@@ -25,30 +24,29 @@ export default function Radio(){
      * 1.click the actionMainButton WHEN LIST IS TOGGLED
      * 2.click else places of the page */
         return (
-            <div>
-                <Button className='actions' id='actionMainButton' onClick={toggleMenu}>
+            <div id='actionContainer'>
+                <Button className={toggled? 'actionsActive':'actions'} id='actionMainButton' onClick={toggleMenu}>
                     <GestureIcon />
                 </Button>
-
                 <CSSTransition
                     in={toggled}
                     timeout={300}
-                    classNames="actionButtonsDiv"
                     unmountOnExit
+                    classNames="actionButtonsDiv"
                     onEnter={() => setToggled(true)}
                     onExited={() => setToggled(false)}
                     >
-                    <div className='actionButtonsDiv'>
-                        <Button className='actionButton' id='idleButton' >
+                    <div className='actionButtonsDiv' >
+                        <Button className='actionButton' id='idleButton' value={'oneIdle'}>
                             <Accessibility />
                         </Button>
-                        <Button className='actionButton' id='readyButton' >
+                        <Button className='actionButton' id='readyButton' value={'readyIdle'}>
                             <DirectionsWalk />
                         </Button>
-                        <Button className='actionButton' id='ninjaButton' >
+                        <Button className='actionButton' id='ninjaButton' value={'ninyaIdle'}>
                             <DirectionsRun />
                         </Button>
-                        <Button className='actionButton' id='happyButton' >
+                        <Button className='actionButton' id='happyButton' value={'happyIdle'}>
                             <SportsMartialArtsIcon />
                         </Button>       
                     </div>

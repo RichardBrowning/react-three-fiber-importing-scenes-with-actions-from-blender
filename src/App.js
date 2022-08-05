@@ -16,7 +16,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function App() {
     const [actionName, setActionName] = useState('oneIdle');
 
+
+
     const jQuerycode = () => {
+      //console.log(actionButRef.current.children[0])
       $("#idleButton").on('click',function(){
           console.log("idle")
           setActionName('oneIdle')
@@ -41,7 +44,7 @@ export default function App() {
     return (
       <div className="h-100" style={{}}>
         <div className="" id="buttonContainer">
-          <Radio/>
+          <Radio />
         </div>
         <div id="modelContainer" className="h-100">
           <Canvas camera={{position: [-3, 6, 20], fov: 6.2}}>
