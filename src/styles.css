@@ -22,17 +22,26 @@ body > * {
   background: #F0F0F0;
 }
 
-#buttonContainer {
-  position:fixed;
-  z-index: 2;
+#modelContainer {
+
 }
 
 #actionContainer{
   display: inline-block;
 }
 
-#modelContainer {
+#buttonContainer {
+  
+}
 
+
+
+#actionButtonsDiv{
+  z-index: 0;
+}
+
+#actionMainButton{
+  z-index: 0;
 }
 
 .actions {
@@ -67,8 +76,6 @@ body > * {
   padding-left: 15px;
 
   box-shadow: 0px 0px 13px rgb(78, 78, 78);
-
-  color: rgb(122, 119, 119);
   background-color: #3888e9;
   border-color: #3888e9;
 
@@ -79,25 +86,6 @@ body > * {
   background-color: #3888e9;
   border-color: #3888e9;
 } 
-
-
-.actionButtonsDiv-enter {
-  opacity: 0;
-  transform: scale(0.9);
-}
-.actionButtonsDiv-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 300ms, transform 300ms;
-}
-.actionButtonsDiv-exit {
-  opacity: 1;
-}
-.actionButtonsDiv-exit-active {
-  opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 300ms, transform 300ms;
-}
 
 
 .actionButton {
@@ -127,7 +115,60 @@ body > * {
   background-color: #9d9d9d;
   border-color: #9d9d9d;
 }
+
+.actionButton {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  margin-inline: 10px;
+  margin-block: 10px;
+  padding-left: 10px;
+
+  box-shadow: 0px 0px 10px rgb(78, 78, 78);
+
+  color: rgb(121, 121, 121);
+  background-color: #bababa;
+  border-color: #bababa;
+
+  /*animation*/
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 600ms, transform 600ms;
+}
+
+.actionButton:hover{
+  color: rgb(205, 205, 205);
+  background-color: #939393;
+  border-color: #939393;
+}
+.actionButton:focus{
+  color: rgb(206, 206, 206);
+  background-color: #9d9d9d;
+  border-color: #9d9d9d;
+}
 /* .actionButton:active{
   background-color: #F0F0F0;
   border-color: #F0F0F0;
 } */
+
+.actionButtonInactive {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  margin-inline: 10px;
+  margin-block: 10px;
+  padding-left: 10px;
+
+  box-shadow: 0px 0px 10px rgb(78, 78, 78);
+
+  color: rgb(121, 121, 121);
+  background-color: #bababa;
+  border-color: #bababa;
+
+  /*animation*/
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 600ms, transform 600ms;
+}

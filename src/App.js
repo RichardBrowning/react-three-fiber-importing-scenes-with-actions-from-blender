@@ -16,10 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function App() {
     const [actionName, setActionName] = useState('oneIdle');
 
-
-
     const jQuerycode = () => {
-      //console.log(actionButRef.current.children[0])
       $("#idleButton").on('click',function(){
           console.log("idle")
           setActionName('oneIdle')
@@ -42,7 +39,7 @@ export default function App() {
     )
     
     return (
-      <div className="h-100" style={{}}>
+      <div className="h-100" id="container">
         <div className="" id="buttonContainer">
           <Radio />
         </div>
