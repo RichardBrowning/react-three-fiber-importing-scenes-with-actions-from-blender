@@ -34,8 +34,6 @@ body > * {
   
 }
 
-
-
 #actionButtonsDiv{
   z-index: 0;
 }
@@ -63,9 +61,15 @@ body > * {
   transform: rotate(-105deg);
 }
 .actions:hover {
+  color: rgb(122, 119, 119);
   background-color: #bababa;
   border-color: #bababa;
 } 
+.actions:focus {
+  background-color: #bababa;
+  border-color: #bababa;
+} 
+
 .actionsActive {
   width: 55px;
   height: 55px;
@@ -86,7 +90,10 @@ body > * {
   background-color: #3888e9;
   border-color: #3888e9;
 } 
-
+.actionsActive:focus {
+  background-color: #3888e9;
+  border-color: #3888e9;
+}
 
 .actionButton {
   width: 45px;
@@ -111,6 +118,11 @@ body > * {
   border-color: #939393;
 }
 .actionButton:focus{
+  color: rgb(206, 206, 206);
+  background-color: #9d9d9d;
+  border-color: #9d9d9d;
+}
+.actionButton:active{
   color: rgb(206, 206, 206);
   background-color: #9d9d9d;
   border-color: #9d9d9d;
