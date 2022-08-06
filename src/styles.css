@@ -22,26 +22,42 @@ body > * {
   background: #F0F0F0;
 }
 
-#modelContainer {
-
+#buttonContainer{
+  margin-top: 25%;
+  position: absolute;
 }
 
 #actionContainer{
+  z-index: 2;
   display: inline-block;
+  background-color: 'rgba(109,123,142,0.0)';
 }
-
-#buttonContainer {
-  
-}
-
 #actionButtonsDiv{
-  z-index: 0;
+  align-items: center;
+  justify-content : center;
+  
+  background-color: 'rgba(109,123,142,0.0)';
 }
 
-#actionMainButton{
-  z-index: 0;
+.actionButtonsDiv-enter {
+  opacity: 0;
+  transform: scale(0.8);
+}
+.actionButtonsDiv-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 600ms, transform 600ms;
+}
+.actionButtonsDiv-exit {
+  opacity: 1;
+}
+.actionButtonsDiv-exit-active {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 600ms, transform 600ms;
 }
 
+/*toggling button */
 .actions {
   width: 55px;
   height: 55px;
@@ -58,7 +74,7 @@ body > * {
   border-color: #bababa;
 
   transition: 0.6s;
-  transform: rotate(-105deg);
+  transform: rotate(-75deg);
 }
 .actions:hover {
   color: rgb(122, 119, 119);
@@ -84,7 +100,7 @@ body > * {
   border-color: #3888e9;
 
   transition: 0.6s;
-  transform: rotate(105deg);
+  transform: rotate(75deg);
 }
 .actionsActive:hover {
   background-color: #3888e9;
@@ -95,45 +111,14 @@ body > * {
   border-color: #3888e9;
 }
 
-.actionButton {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-
-  margin-inline: 10px;
-  margin-block: 10px;
-  padding-left: 10px;
-
-  box-shadow: 0px 0px 10px rgb(78, 78, 78);
-
-  color: rgb(121, 121, 121);
-  background-color: #bababa;
-  border-color: #bababa;
-
-  transition: 0.3s;
-}
-.actionButton:hover{
-  color: rgb(205, 205, 205);
-  background-color: #939393;
-  border-color: #939393;
-}
-.actionButton:focus{
-  color: rgb(206, 206, 206);
-  background-color: #9d9d9d;
-  border-color: #9d9d9d;
-}
-.actionButton:active{
-  color: rgb(206, 206, 206);
-  background-color: #9d9d9d;
-  border-color: #9d9d9d;
-}
+/*action-controlling buttons*/
 
 .actionButton {
   width: 45px;
   height: 45px;
   border-radius: 50%;
 
-  margin-inline: 10px;
+
   margin-block: 10px;
   padding-left: 10px;
 
